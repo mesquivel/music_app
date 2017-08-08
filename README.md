@@ -1,6 +1,9 @@
 # webpack-vue
 
-> Webpack Vue
+## Features
+- All [vue-generator](http://vuejs-templates.github.io/webpack/) features
+- Bootstrap 3 - SCSS
+- Inject SVG Sprites
 
 ## Build Setup
 
