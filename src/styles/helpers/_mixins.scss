@@ -1,0 +1,131 @@
+//
+// Mixins
+// --------------------------------------------------
+
+@mixin breakpoint($points) {
+  @each $point in $points {
+    @if $point == large {
+      @media screen and (min-width: $screen-lg-min) { @content; }
+    }
+    @else if $point == desktop {
+      @media screen and (min-width: $screen-md-min) and (max-width: $screen-lg-min) { @content; }
+    }
+    @else if $point == desktop-down {
+      @media screen and (max-width: $screen-md-max) { @content; }
+    }
+    @else if $point == tablet-up {
+      @media screen and (min-width: $screen-md-min) { @content; }
+    }
+    @else if $point == tablet {
+      @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { @content; }
+    }
+    @else if $point == tablet-down {
+      @media screen and (max-width: $screen-sm-max) { @content; }
+    }
+    @else if $point == tablet-portrait-down {
+      @media screen and (max-width: $screen-xs-max)  { @content; }
+      @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation: portrait) { @content; }
+    }
+    @else if $point == tablet-landscape-up {
+      @media screen and (min-width: $screen-md-min) { @content; }
+      @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation: landscape) { @content; }
+    }
+    @else if $point == tablet-portrait {
+      @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation: portrait) { @content; }
+    }
+    @else if $point == tablet-landscape {
+      @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation: landscape) { @content; }
+    }
+    @else if $point == phone-up {
+      @media screen and (min-width: $screen-sm-min) { @content; }
+    }
+    @else if $point == phone {
+      @media screen and (max-width: $screen-xs-max)  { @content; }
+    }
+    @else if $point == phone-portrait {
+      @media screen and (max-width: $screen-xs-max) and (orientation: portrait)  { @content; }
+    }
+    @else if $point == phone-landscape {
+      @media screen and (max-width: $screen-xs-max) and (orientation: landscape)  { @content; }
+    }
+  }
+}
+
+@mixin centerAlign($align: false) {
+  position: absolute;
+  @if $align == vertcial {
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @else if $align == horizontal {
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @else {
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+@mixin transition($args...) {
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  -webkit-transition: $args;
+  transition: $args;
+}
+
+@mixin rotate($angle) {
+  -moz-transform: rotate($angle);
+  -ms-transform: rotate($angle);
+  -webkit-transform: rotate($angle);
+  transform: rotate($angle);
+}
+
+// Fonts
+@mixin fontFace($font-name, $font-weight: 500, $font-style: normal) {
+  @font-face {
+    font-family: '#{$font-name}';
+    src: url('#{$font-url}/#{$font-name}.eot');
+    src: url('#{$font-url}/#{$font-name}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/#{$font-name}.woff2') format('woff2'),
+         url('#{$font-url}/#{$font-name}.woff') format('woff'),
+         url('#{$font-url}/#{$font-name}.ttf') format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+// DINWeb-Black
+@mixin dinweb-black {
+  font-family: $font-black;
+  font-weight: 900;
+  font-style: normal;
+}
+
+// DINWeb-Light
+@mixin dinweb-light {
+  font-family: $font-light;
+  font-weight: normal;
+  font-style: normal;
+}
+
+// DINWeb-Medium
+@mixin dinweb-medium {
+  font-family: $font-medium;
+  font-weight: 500;
+  font-style: normal;
+}

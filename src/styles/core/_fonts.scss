@@ -1,0 +1,13 @@
+//
+// Fonts
+// --------------------------------------------------
+
+$font-url: '../assets/fonts' !default;
+
+
+// DINWeb-Black
+@include fontFace($font-black, 900, normal);
+// DINWeb-Light
+@include fontFace($font-light, normal, normal);
+// DINWeb-Medium
+@include fontFace($font-medium, 500, normal);

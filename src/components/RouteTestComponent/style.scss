@@ -1,4 +1,14 @@
- h1, h2 {
+// Site Core
+@import '../../styles/core/variables';
+
+// Site Helpers
+@import '../../styles/helpers/mixins';
+
+// Bootstrap Variables
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables';
+
+h1, h2 {
+  color: $color-white;
   font-weight: normal;
 }
 
@@ -13,5 +23,11 @@ li {
 }
 
 a {
-  color: #42b983;
+  color: $color-turquoise;
+}
+
+@include breakpoint('phone') {
+  a {
+    color: $color-alto;
+  }
 }

@@ -1,9 +1,19 @@
 // Site Variables
 @import 'core/variables';
 
-// Site Helpers
-@import 'helpers/svgs';
-
 // Vendors
 @import 'vendors/bootstrap/custom/variables';
 @import 'vendors/bootstrap/core';
+
+// Site Helpers
+@import 'helpers/mixins';
+@import 'helpers/svgs';
+
+// Site Core
+@import 'core/fonts';
+@import 'core/type';
+
+body {
+  background-color: $color-black;
+  padding-bottom: 50px;
+}

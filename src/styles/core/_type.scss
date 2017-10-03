@@ -1,0 +1,89 @@
+// Type
+// -------------------------
+
+// Margins
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .p { margin: 0; }
+
+
+// Font Family
+h1,
+.h1,
+h2,
+.h2 {
+  text-transform: uppercase;
+  @include dinweb-black;
+}
+
+h2,
+.h2 {
+  @include breakpoint('phone') {
+    margin-bottom: 10px;
+  }
+}
+
+h3,
+.h3 {
+  font-family: georgia;
+  font-style: italic;
+  margin-bottom: 50px;
+  text-transform: lowercase;
+}
+
+h4,
+.h4 {
+  text-transform: uppercase;
+  @include dinweb-medium;
+}
+
+p,
+.p {
+  @include dinweb-light;
+}
+
+
+// Sizes
+h1,
+.h1 {
+  font-size: 60px;
+  letter-spacing: 18px;
+  line-height: 65px;
+
+  @include breakpoint('phone') {
+    font-size: 18px;
+    letter-spacing: 5px;
+    line-height: 25px;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 40px;
+  letter-spacing: 8px;
+  line-height: 56px;
+
+  @include breakpoint('phone') {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+
+h4,
+.h4 {
+  font-size: 18px;
+  letter-spacing: 3px;
+  line-height: 25px;
+}
+
+p,
+.p {
+  font-size: 20px;
+  letter-spacing: normal;
+  line-height: 28px;
+}
