@@ -8,12 +8,10 @@
 // Site Helpers
 @import 'helpers/mixins';
 @import 'helpers/svgs';
+@import 'helpers/utils';
 
 // Site Core
 @import 'core/fonts';
 @import 'core/type';
+@import 'core/template';
 
-body {
-  background-color: $color-black;
-  padding-bottom: 50px;
-}

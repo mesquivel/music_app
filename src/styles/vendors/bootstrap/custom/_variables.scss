@@ -7,14 +7,14 @@
 //## Gray and brand colors for use across Bootstrap.
 
 $brand-primary: $color-white;
-$link-primary: $color-white;
+$link-primary: $color-black;
 
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
 
 //** Global text color on `<body>`.
-$text-color: $color-black;
+$text-color: $color-white;
 
 //== Typography
 //
@@ -29,10 +29,6 @@ $line-height-base: 1.63;
 //## For each of Bootstrap's buttons, define text, background and border color.
 
 $btn-font-weight: 500;
-
-$btn-primary-color: $color-white;
-$btn-primary-bg: $color-white;
-$btn-primary-border: $color-white;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius-base: 0;

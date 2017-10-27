@@ -1,0 +1,25 @@
+<div class="home">
+  
+  <h1>{{ msg }}</h1>
+  <div class="module-container">
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+          <template>
+              <div>
+                <multiselect :options="settings.songs" track-by="id" label="title" placeholder="Escoge tu canción" select-label="Votar por esta"  @select="addSong" :hide-selected="true" ></multiselect>
+              </div>
+            </template>  
+          </div>
+        </div>
+        <div class="row">
+          
+            <div class="col-md-8 col-md-offset-2">
+              <!-- <template v-for="(song, index) in sortedSongs" >
+                  <c-setlist :item="song" :index="index" :key="song.id" v-model="settings.songs[index]"></c-setlist>
+              </template>  -->
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
